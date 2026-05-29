@@ -34,6 +34,16 @@
             border-radius: 6px; font-weight: 600; font-size: 16px; transition: background 0.3s;
         }
         .btn-download:hover { background-color: #218838; }
+        /* Gaya untuk membuat select terlihat samar saat placeholder aktif */
+select:invalid {
+    color: #999; /* Warna abu-abu samar */
+}
+
+/* Mengembalikan warna hitam saat opsi yang benar sudah dipilih */
+select option:not([value=""]) {
+    color: #333;
+}
+
     </style>
 </head>
 <body>
@@ -45,12 +55,16 @@
         <div class="form-group">
             <label>CSO CODE IM3</label>
             <select name="CSO_CODE" required>
-                <option value="SKBPLARA04">SKBPLARA04</option>
-                <option value="SKBPLARA08">SKBPLARA08</option>
-                <option value="SKBPLARA11">SKBPLARA11</option>
-                <option value="DSESGRN01">DSESGRN01</option>
-                <option value="DSE22308001">DSE22308001</option>
-            </select>
+    <!-- value kosong "" akan memicu CSS select:invalid -->
+    <option value="" disabled selected>Pilih ID DSE</option>
+    <option value="SKBPLARA04">SKBPLARA04</option>
+    <option value="SKBPLARA08">SKBPLARA08</option>
+    <option value="SKBPLARA11">SKBPLARA11</option>
+    <option value="DSESGRN01">DSESGRN01</option>
+    <option value="DSE22308001">DSE22308001</option>
+</select>
+
+
         </div>
         <div class="form-group">
             <label>OUTLET_ID</label>
@@ -85,4 +99,3 @@
 
 </body>
 </html>
-
