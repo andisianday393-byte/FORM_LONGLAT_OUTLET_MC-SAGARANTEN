@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM LONG LAT OUTLET</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .container { max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
+        
+        /* Judul Dibuat Lebih Rapi */
+        h2 { 
+            text-align: center; 
+            color: #2c3e50; 
+            margin-top: 0; 
+            margin-bottom: 25px; 
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; font-size: 14px; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 14px; }
+        .row { display: flex; gap: 15px; }
+        
+        button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: 600; margin-top: 10px; transition: background 0.3s; }
+        button:hover { background-color: #0056b3; }
+        
+        /* Tombol Download */
+        .btn-download { 
+            display: block; text-align: center; margin-top: 15px; padding: 12px; 
+            background-color: #28a745; color: white; text-decoration: none; 
+            border-radius: 6px; font-weight: 600; font-size: 16px; transition: background 0.3s;
+        }
+        .btn-download:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Long Lat Outlet<br><small style="font-size: 14px; color: #7f8c8d;">MC-SAGARANTEN</small></h2>
+    
+    <form id="outletForm" action="https://script.google.com/macros/s/AKfycbylz_504cVAvGGixVq2et108OBquIRzdyldgH5av0oX5kmdGKM-aK2T_LLL584CXMub/exec" method="POST">
+        <div class="form-group">
+            <label>CSO CODE IM3</label>
+            <select name="CSO_CODE" required>
+                <option value="SKBPLARA04">SKBPLARA04</option>
+                <option value="SKBPLARA08">SKBPLARA08</option>
+                <option value="SKBPLARA11">SKBPLARA11</option>
+                <option value="DSESGRN01">DSESGRN01</option>
+                <option value="DSE22308001">DSE22308001</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>OUTLET_ID</label>
+            <input type="text" name="OUTLET_ID" placeholder="Masukkan ID Outlet" required>
+        </div>
+        <div class="form-group">
+            <label>OUTLET_NAME</label>
+            <input type="text" name="OUTLET_NAME" placeholder="Masukkan Nama Outlet" required>
+        </div>
+        <div class="row">
+            <div class="form-group" style="flex:1;">
+                <label>LAT</label>
+                <input type="text" name="LAT" required>
+            </div>
+            <div class="form-group" style="flex:1;">
+                <label>LONG</label>
+                <input type="text" name="LONG" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>KETERANGAN</label>
+            <input type="text" name="KETERANGAN" placeholder="Opsional">
+        </div>
+        
+        <button type="submit">SUBMIT DATA</button>
+        
+        <a href="https://docs.google.com/spreadsheets/d/1KrPA8b62QU4T7jtBGf_mgg8g47WPW-_kmnHEsUTggpw/export?format=xlsx" class="btn-download">
+            DOWNLOAD FILE
+        </a>
+    </form>
+</div>
+
+</body>
+</html>
+
